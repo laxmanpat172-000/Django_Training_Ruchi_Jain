@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Signup Page</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            margin: 0;
+            padding: 0;
+
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family: Arial, sans-serif;
+
+            color: white;
+
+            /* Modern Background */
+
+            background:
+                radial-gradient(
+                    circle at top left,
+                    #173b68,
+                    transparent 35%
+                ),
+
+                radial-gradient(
+                    circle at bottom right,
+                    #4b1d68,
+                    transparent 35%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #070b16,
+                    #101c38,
+                    #080b17
+                );
+        }
+
+
+        /* Signup Container */
+
+        .signup-container {
+
+            width: 370px;
+
+            max-width: 90%;
+
+            padding: 40px 35px;
+
+            background: rgba(15, 28, 58, 0.80);
+
+            backdrop-filter: blur(12px);
+
+            border: 1px solid #a66cff;
+
+            border-radius: 18px;
+
+            box-shadow:
+
+                0 0 20px rgba(124, 77, 255, 0.30),
+
+                0 0 40px rgba(0, 200, 255, 0.18);
+        }
+
+
+        /* Heading */
+
+        h1 {
+
+            text-align: center;
+
+            color: #c49aff;
+
+            margin-top: 0;
+
+            margin-bottom: 30px;
+
+            text-shadow:
+
+                0 0 10px #7c4dff,
+
+                0 0 20px #b23cff;
+        }
+
+
+        /* Form Group */
+
+        .form-group {
+
+            margin-bottom: 20px;
+        }
+
+
+        /* Labels */
+
+        label {
+
+            display: block;
+
+            margin-bottom: 8px;
+
+            color: #b9c9e8;
+
+            font-weight: bold;
+
+            font-size: 14px;
+        }
+
+
+        /* Inputs */
+
+        input[type="text"],
+        input[type="password"] {
+
+            width: 100%;
+
+            padding: 12px;
+
+            background: rgba(5, 12, 30, 0.75);
+
+            color: white;
+
+            border: 1px solid #4ddcff;
+
+            border-radius: 8px;
+
+            outline: none;
+
+            transition: 0.3s;
+        }
+
+
+        input[type="text"]::placeholder,
+        input[type="password"]::placeholder {
+
+            color: #7889aa;
+        }
+
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+
+            border-color: #a66cff;
+
+            box-shadow:
+
+                0 0 10px #7c4dff,
+
+                0 0 18px rgba(0, 191, 255, 0.3);
+        }
+
+
+        /* Signup Button */
+
+        input[type="submit"] {
+
+            width: 100%;
+
+            padding: 13px;
+
+            background: linear-gradient(
+                90deg,
+                #7c4dff,
+                #b23cff
+            );
+
+            color: white;
+
+            border: none;
+
+            border-radius: 9px;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: all 0.3s ease;
+        }
+
+
+        input[type="submit"]:hover {
+
+            background: linear-gradient(
+                90deg,
+                #00bfff,
+                #7c4dff
+            );
+
+            transform: translateY(-2px) scale(1.02);
+
+            box-shadow:
+
+                0 0 12px #00bfff,
+
+                0 0 25px #7c4dff;
+        }
+
+
+        /* Error Message */
+
+        .error {
+
+            display: block;
+
+            margin-top: 8px;
+
+            color: #ff7188;
+
+            font-size: 14px;
+        }
+
+
+        /* Mobile */
+
+        @media (max-width: 500px) {
+
+            .signup-container {
+
+                padding: 30px 20px;
+            }
+
+            h1 {
+
+                font-size: 28px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="signup-container">
+
+
+        <h1>✨ Signup Page</h1>
+
+
+        <form action="{% url 'saveuser' %}" method="post">
+
+            {% csrf_token %}
+
+
+            <div class="form-group">
+
+                <label for="username">
+                    Username:
+                </label>
+
+                <input
+                    type="text"
+                    name="username"
+                    id="username"
+                    placeholder="Enter username"
+                    required
+                >
+
+
+                <span class="error">
+                    {{ errormessage }}
+                </span>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="password">
+                    Password:
+                </label>
+
+                <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="Create password"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="name">
+                    Name:
+                </label>
+
+                <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Enter your name"
+                    required
+                >
+
+            </div>
+
+
+            <div>
+
+                <input
+                    type="submit"
+                    value="Sign-Up"
+                >
+
+            </div>
+
+
+        </form>
+
+
+    </div>
+
+
+</body>
+
+</html>
+

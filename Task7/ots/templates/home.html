@@ -1,0 +1,256 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OTS Home</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+
+            /* New Background */
+            background:
+                radial-gradient(circle at top left, #173b68, transparent 35%),
+                radial-gradient(circle at bottom right, #4b1d68, transparent 35%),
+                linear-gradient(135deg, #070b16, #101c38, #080b17);
+
+            color: white;
+            text-align: center;
+            min-height: 100vh;
+        }
+
+
+        /* Header */
+
+        header {
+            padding: 30px;
+
+            color: #61e7ff;
+
+            text-shadow:
+                0 0 10px #00c8ff,
+                0 0 20px #7c4dff;
+        }
+
+
+        header h1 {
+            font-size: 36px;
+        }
+
+
+        /* Main */
+
+        main {
+            margin-top: 80px;
+        }
+
+
+        /* Main Box */
+
+        .box {
+
+            display: inline-block;
+
+            padding: 40px 55px;
+
+            border: 1px solid #45d9ff;
+
+            border-radius: 18px;
+
+            background: rgba(15, 28, 58, 0.75);
+
+            backdrop-filter: blur(10px);
+
+            box-shadow:
+                0 0 18px rgba(0, 200, 255, 0.25),
+                0 0 35px rgba(124, 77, 255, 0.20);
+        }
+
+
+        .box h2 {
+            color: #ffffff;
+
+            text-shadow: 0 0 8px #7c4dff;
+        }
+
+
+        .box p {
+            color: #b9c9e8;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* Buttons */
+
+        button {
+
+            padding: 12px 32px;
+
+            margin: 10px;
+
+            border: 1px solid #4ddcff;
+
+            border-radius: 9px;
+
+            background: rgba(0, 191, 255, 0.08);
+
+            color: #5ee7ff;
+
+            font-size: 15px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: all 0.3s ease;
+        }
+
+
+        /* Login Button */
+
+        a:first-of-type button {
+            border-color: #00d9ff;
+        }
+
+
+        /* Signup Button */
+
+        a:last-of-type button {
+            border-color: #a66cff;
+            color: #c49aff;
+        }
+
+
+        /* Hover */
+
+        button:hover {
+
+            color: white;
+
+            border-color: white;
+
+            transform: translateY(-3px) scale(1.05);
+        }
+
+
+        a:first-of-type button:hover {
+
+            background: linear-gradient(
+                90deg,
+                #00bfff,
+                #0077ff
+            );
+
+            box-shadow:
+                0 0 12px #00bfff,
+                0 0 25px #0077ff;
+        }
+
+
+        a:last-of-type button:hover {
+
+            background: linear-gradient(
+                90deg,
+                #7c4dff,
+                #b23cff
+            );
+
+            box-shadow:
+                0 0 12px #7c4dff,
+                0 0 25px #b23cff;
+        }
+
+
+        a {
+            text-decoration: none;
+        }
+
+
+        /* Footer */
+
+        footer {
+
+            margin-top: 80px;
+
+            color: #8996b5;
+
+            font-size: 14px;
+        }
+
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            .box {
+                width: 80%;
+                padding: 30px 15px;
+            }
+
+            button {
+                width: 200px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <h1>OTS - Online Testing System</h1>
+
+</header>
+
+
+<main>
+
+    <section class="box">
+
+        <h2>Welcome to OTS 👋</h2>
+
+        <p>Test your knowledge with online tests.</p>
+
+
+        <a href="{% url 'login' %}">
+            <button type="button">🔐 Login</button>
+        </a>
+
+
+        <a href="{% url 'signup' %}">
+            <button type="button">✨ Signup</button>
+        </a>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>OTS - Online Testing System</p>
+
+</footer>
+
+
+</body>
+
+</html>
+```

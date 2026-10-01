@@ -1,0 +1,168 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NRI Institute - College Information</title>
+
+    <link rel="stylesheet" href="{% static 'college/style.css' %}">
+
+    <style>
+        body {
+            background-color: #f4f8ff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: darkblue;
+            color: white;
+            padding: 35px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 38px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 30px auto;
+            text-align: left;
+        }
+
+        .box {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px gray;
+        }
+
+        .box h2 {
+            color: darkblue;
+        }
+
+        .box ul {
+            line-height: 2;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: darkblue;
+            color: white;
+            padding: 14px 25px;
+            margin: 10px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 17px;
+        }
+
+        .button:hover {
+            background-color: blue;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>NRI Institute of Information Science and Technology</h1>
+        <p>NRI | Bhopal, Madhya Pradesh</p>
+    </header>
+
+    <div class="container">
+
+        <div class="box">
+            <h2>About NRI Institute</h2>
+
+            <p>
+                NRI Institute of Information Science and Technology is an
+                educational institution in Bhopal offering various
+                undergraduate and postgraduate programs.
+            </p>
+        </div>
+
+        <div class="box">
+            <h2>Courses Offered</h2>
+
+            <ul>
+                <li>B.Tech</li>
+                <li>M.Tech</li>
+                <li>MBA</li>
+                <li>MCA</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h2>Engineering Branches</h2>
+
+            <ul>
+                <li>Computer Science and Engineering</li>
+                <li>Artificial Intelligence and Data Science</li>
+                <li>Artificial Intelligence and Machine Learning</li>
+                <li>Information Technology</li>
+                <li>Electronics and Communication Engineering</li>
+                <li>Mechanical Engineering</li>
+                <li>Civil Engineering</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h2>Location</h2>
+
+            <p>
+                NRI Institute Campus, Bhopal, Madhya Pradesh.
+            </p>
+        </div>
+
+        <div class="box">
+            <h2>Why Choose NRI?</h2>
+
+            <ul>
+                <li>Technical education</li>
+                <li>Experienced faculty</li>
+                <li>Laboratories and practical learning</li>
+                <li>Academic and extracurricular activities</li>
+                <li>Career development opportunities</li>
+            </ul>
+        </div>
+
+        <div class="box" style="text-align:center;">
+
+            <a href="https://nrigroupindia.com/" target="_blank" class="button">
+                Visit Official Website
+            </a>
+
+            <a href="{% url 'main' %}" class="button">
+                Back to College List
+            </a>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 College Information Website</p>
+    </footer>
+
+</body>
+
+</html>

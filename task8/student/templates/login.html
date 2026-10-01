@@ -1,0 +1,349 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login Page</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            margin: 0;
+            padding: 0;
+
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family: Arial, sans-serif;
+
+            color: white;
+
+            /* Modern Background */
+
+            background:
+                radial-gradient(
+                    circle at top left,
+                    #173b68,
+                    transparent 35%
+                ),
+
+                radial-gradient(
+                    circle at bottom right,
+                    #4b1d68,
+                    transparent 35%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #070b16,
+                    #101c38,
+                    #080b17
+                );
+        }
+
+
+        /* Login Container */
+
+        .login-container {
+
+            width: 370px;
+
+            max-width: 90%;
+
+            padding: 40px 35px;
+
+            background: rgba(15, 28, 58, 0.80);
+
+            backdrop-filter: blur(12px);
+
+            border: 1px solid #45d9ff;
+
+            border-radius: 18px;
+
+            box-shadow:
+
+                0 0 20px rgba(0, 200, 255, 0.25),
+
+                0 0 40px rgba(124, 77, 255, 0.20);
+        }
+
+
+        /* Heading */
+
+        h1 {
+
+            text-align: center;
+
+            color: #61e7ff;
+
+            margin-bottom: 30px;
+
+            text-shadow:
+
+                0 0 10px #00bfff,
+
+                0 0 20px #7c4dff;
+        }
+
+
+        /* Form */
+
+        .form-group {
+
+            margin-bottom: 20px;
+        }
+
+
+        /* Labels */
+
+        label {
+
+            display: block;
+
+            margin-bottom: 8px;
+
+            color: #b9c9e8;
+
+            font-size: 14px;
+
+            font-weight: bold;
+        }
+
+
+        /* Inputs */
+
+        input[type="text"],
+        input[type="password"] {
+
+            width: 100%;
+
+            padding: 12px;
+
+            background: rgba(5, 12, 30, 0.75);
+
+            color: white;
+
+            border: 1px solid #4ddcff;
+
+            border-radius: 8px;
+
+            outline: none;
+
+            transition: 0.3s;
+        }
+
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+
+            border-color: #a66cff;
+
+            box-shadow:
+
+                0 0 10px #7c4dff,
+
+                0 0 18px rgba(0, 191, 255, 0.3);
+        }
+
+
+        /* Login Button */
+
+        input[type="submit"] {
+
+            width: 100%;
+
+            padding: 13px;
+
+            margin-top: 5px;
+
+            background: linear-gradient(
+                90deg,
+                #00bfff,
+                #7c4dff
+            );
+
+            color: white;
+
+            border: none;
+
+            border-radius: 9px;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: all 0.3s ease;
+        }
+
+
+        input[type="submit"]:hover {
+
+            transform: translateY(-2px) scale(1.02);
+
+            box-shadow:
+
+                0 0 12px #00bfff,
+
+                0 0 25px #7c4dff;
+        }
+
+
+        /* Error */
+
+        .error {
+
+            display: block;
+
+            margin-top: 15px;
+
+            text-align: center;
+
+            color: #ff6b81;
+
+            font-size: 14px;
+        }
+
+
+        /* Signup */
+
+        .signup {
+
+            display: block;
+
+            margin-top: 25px;
+
+            text-align: center;
+        }
+
+
+        .signup a {
+
+            color: #66e6ff;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+
+        .signup a:hover {
+
+            color: #c49aff;
+
+            text-shadow: 0 0 8px #7c4dff;
+        }
+
+
+        /* Mobile */
+
+        @media (max-width: 500px) {
+
+            .login-container {
+
+                padding: 30px 20px;
+            }
+
+            h1 {
+
+                font-size: 28px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="login-container">
+
+
+        <h1>🔐 Login Page</h1>
+
+
+        <form action="{% url 'loginvalidation' %}" method="post">
+
+            {% csrf_token %}
+
+
+            <div class="form-group">
+
+                <label for="username">
+                    Username
+                </label>
+
+                <input
+                    type="text"
+                    name="username"
+                    id="username"
+                    placeholder="Enter username"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="password">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="Enter password"
+                    required
+                >
+
+            </div>
+
+
+            <input type="submit" value="Login">
+
+
+            <span class="error">
+                {{ erg }}
+            </span>
+
+
+        </form>
+
+
+        <div class="signup">
+
+            <a href="{% url 'signup' %}">
+                ✨ Create New User
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Placement Prediction</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+
+            font-family: Arial, sans-serif;
+
+            background: linear-gradient(
+                135deg,
+                #0f2027,
+                #203a43,
+                #2c5364
+            );
+
+            color: white;
+        }
+
+        .container {
+
+            width: 450px;
+
+            margin: 60px auto;
+
+            padding: 35px;
+
+            background: rgba(255, 255, 255, 0.08);
+
+            border: 1px solid #00e5ff;
+
+            border-radius: 15px;
+
+            box-shadow: 0 0 25px rgba(0, 229, 255, 0.4);
+
+        }
+
+        h1 {
+
+            text-align: center;
+
+            color: #00e5ff;
+
+            text-shadow: 0 0 10px #00e5ff;
+
+            margin-bottom: 10px;
+
+        }
+
+        .description {
+
+            text-align: center;
+
+            color: #cccccc;
+
+            margin-bottom: 30px;
+
+        }
+
+        .form-group {
+
+            margin-bottom: 20px;
+
+        }
+
+        label {
+
+            display: block;
+
+            margin-bottom: 8px;
+
+            font-weight: bold;
+
+        }
+
+        input {
+
+            width: 100%;
+
+            padding: 12px;
+
+            box-sizing: border-box;
+
+            background: #101820;
+
+            color: white;
+
+            border: 1px solid #00e5ff;
+
+            border-radius: 7px;
+
+            outline: none;
+
+            font-size: 15px;
+
+        }
+
+        input:focus {
+
+            box-shadow: 0 0 10px #00e5ff;
+
+        }
+
+        input::placeholder {
+
+            color: #888;
+
+        }
+
+        button {
+
+            width: 100%;
+
+            padding: 13px;
+
+            margin-top: 10px;
+
+            border: none;
+
+            border-radius: 7px;
+
+            background: #00e5ff;
+
+            color: #101820;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+
+        }
+
+        button:hover {
+
+            background: #39ff14;
+
+            box-shadow: 0 0 15px #39ff14;
+
+            transform: scale(1.02);
+
+        }
+
+        .footer {
+
+            text-align: center;
+
+            margin-top: 25px;
+
+            color: #aaa;
+
+            font-size: 14px;
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="container">
+
+        <h1>🎓 Placement Prediction</h1>
+
+        <p class="description">
+            Enter student details to predict placement
+        </p>
+
+
+        <form action="{% url 'result' %}" method="GET">
+
+
+            <div class="form-group">
+
+                <label for="cgpa">
+                    CGPA
+                </label>
+
+                <input
+                    type="number"
+                    step="any"
+                    id="cgpa"
+                    name="cgpa"
+                    placeholder="Enter CGPA"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="iq">
+                    IQ
+                </label>
+
+                <input
+                    type="number"
+                    step="any"
+                    id="iq"
+                    name="iq"
+                    placeholder="Enter IQ"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="profile_score">
+                    Profile Score
+                </label>
+
+                <input
+                    type="number"
+                    step="any"
+                    id="profile_score"
+                    name="profile_score"
+                    placeholder="Enter Profile Score"
+                    required
+                >
+
+            </div>
+            
+
+
+            
+
+
+            <button type="submit">
+                🔮 Predict Placement
+            </button>
+
+
+        </form>
+
+
+        <div class="footer">
+
+            ML Based Student Placement Prediction System
+
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>

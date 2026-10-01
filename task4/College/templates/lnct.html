@@ -1,0 +1,255 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LNCT - College Information</title>
+
+    <link rel="stylesheet" href="{% static 'college/style.css' %}">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            color: #222;
+            text-align: left;
+        }
+
+        .header {
+            background-color: #123c69;
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        .header h1 {
+            color: white;
+            font-size: 42px;
+            margin: 0 0 10px;
+        }
+
+        .header p {
+            font-size: 19px;
+            margin: 0;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1100px;
+            margin: 30px auto;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .card h2 {
+            color: #123c69;
+            margin-top: 0;
+        }
+
+        .courses {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+        }
+
+        .course {
+            background-color: #eef4ff;
+            padding: 18px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .button-area {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .visit-button {
+            display: inline-block;
+            background-color: #123c69;
+            color: white;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-size: 17px;
+            margin: 8px;
+        }
+
+        .visit-button:hover {
+            background-color: #1d5c98;
+        }
+
+        footer {
+            background-color: #123c69;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+
+        <h1>Lakshmi Narain College of Technology</h1>
+
+        <p>LNCT | Bhopal, Madhya Pradesh</p>
+
+    </div>
+
+
+    <div class="container">
+
+        <div class="card">
+
+            <h2>About LNCT</h2>
+
+            <p>
+                Lakshmi Narain College of Technology (LNCT) is an
+                engineering and technical education institution located
+                in Bhopal, Madhya Pradesh.
+            </p>
+
+            <p>
+                The institution provides undergraduate and postgraduate
+                programs in engineering, technology and management.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>Courses</h2>
+
+            <div class="courses">
+
+                <div class="course">
+                    B.Tech
+                </div>
+
+                <div class="course">
+                    M.Tech
+                </div>
+
+                <div class="course">
+                    MBA
+                </div>
+
+                <div class="course">
+                    MCA
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>Engineering Branches</h2>
+
+            <ul>
+
+                <li>Computer Science & Engineering</li>
+
+                <li>Artificial Intelligence & Data Science</li>
+
+                <li>Artificial Intelligence & Machine Learning</li>
+
+                <li>Information Technology</li>
+
+                <li>Electronics & Communication Engineering</li>
+
+                <li>Electrical Engineering</li>
+
+                <li>Mechanical Engineering</li>
+
+                <li>Civil Engineering</li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>Location</h2>
+
+            <p>
+                LNCT Campus, Kalchuri Nagar,
+                Raisen Road, Bhopal,
+                Madhya Pradesh.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>Why Choose LNCT?</h2>
+
+            <ul>
+
+                <li>Technical and engineering education</li>
+
+                <li>Industry-oriented learning</li>
+
+                <li>Practical learning opportunities</li>
+
+                <li>Various undergraduate and postgraduate programs</li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="button-area">
+
+            <a class="visit-button"
+               href="https://lnct.ac.in/"
+               target="_blank">
+
+                Visit Official Website
+
+            </a>
+
+
+            <a class="visit-button"
+               href="{% url 'main' %}">
+
+                Back to College List
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        <p>
+            © LNCT College Information Page
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

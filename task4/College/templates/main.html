@@ -1,0 +1,310 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>College Hub | Bhopal</title>
+
+    <link rel="stylesheet" href="{% static 'college/style.css' %}">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🎓 College<span>Hub</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#colleges">Colleges</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <a href="#colleges" class="nav-button">
+            Explore Colleges
+        </a>
+
+    </nav>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                🎓 YOUR EDUCATION JOURNEY STARTS HERE
+            </p>
+
+            <h1>
+                Find Your
+                <span>Perfect College</span>
+            </h1>
+
+            <p class="hero-text">
+                Explore top colleges in Bhopal, discover courses,
+                branches, campus information and official websites
+                — all in one place.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#colleges" class="primary-button">
+                    Explore Colleges →
+                </a>
+
+                <a href="#about" class="secondary-button">
+                    Learn More
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+
+            <div class="hero-card">
+                🎓
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= COLLEGE SECTION ================= -->
+
+    <section class="college-section" id="colleges">
+
+        <div class="section-heading">
+
+            <p>OUR COLLEGES</p>
+
+            <h2>
+                Explore Top Colleges
+            </h2>
+
+            <span>
+                Choose a college and explore its courses,
+                branches and other information.
+            </span>
+
+        </div>
+
+
+        <div class="college-container">
+
+
+            <!-- SISTEC CARD -->
+
+            <div class="college-card">
+
+                <div class="college-image sistec-image">
+                    <div class="image-icon">🏫</div>
+                </div>
+
+                <div class="card-content">
+
+                    <span class="location">
+                        📍 Bhopal, Madhya Pradesh
+                    </span>
+
+                    <h3>
+                        SISTEC
+                    </h3>
+
+                    <p>
+                        Sagar Institute of Science and Technology
+                    </p>
+
+                    <div class="card-info">
+
+                        <span>🎓 Engineering</span>
+                        <span>💻 Technology</span>
+
+                    </div>
+
+                    <a href="{% url 'sistec' %}" class="card-button">
+                        View College →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- LNCT CARD -->
+
+            <div class="college-card">
+
+                <div class="college-image lnct-image">
+                    <div class="image-icon">🏛️</div>
+                </div>
+
+                <div class="card-content">
+
+                    <span class="location">
+                        📍 Bhopal, Madhya Pradesh
+                    </span>
+
+                    <h3>
+                        LNCT
+                    </h3>
+
+                    <p>
+                        Lakshmi Narain College of Technology
+                    </p>
+
+                    <div class="card-info">
+
+                        <span>🎓 Engineering</span>
+                        <span>🤖 AI & DS</span>
+
+                    </div>
+
+                    <a href="{% url 'lnct' %}" class="card-button">
+                        View College →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- NRI CARD -->
+
+            <div class="college-card">
+
+                <div class="college-image nri-image">
+                    <div class="image-icon">🏢</div>
+                </div>
+
+                <div class="card-content">
+
+                    <span class="location">
+                        📍 Bhopal, Madhya Pradesh
+                    </span>
+
+                    <h3>
+                        NRI Institute
+                    </h3>
+
+                    <p>
+                        NRI Institute of Information Science
+                    </p>
+
+                    <div class="card-info">
+
+                        <span>🎓 Engineering</span>
+                        <span>💻 Computer Science</span>
+
+                    </div>
+
+                    <a href="{% url 'nri' %}" class="card-button">
+                        View College →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT SECTION ================= -->
+
+    <section class="about-section" id="about">
+
+        <div class="about-content">
+
+            <p class="section-label">
+                ABOUT COLLEGE HUB
+            </p>
+
+            <h2>
+                Everything You Need
+                <span>In One Place</span>
+            </h2>
+
+            <p>
+                College Hub is a simple platform designed to help
+                students explore colleges, courses and engineering
+                branches in Bhopal.
+            </p>
+
+            <div class="features">
+
+                <div>
+                    <strong>🎓 3+</strong>
+                    <small>Colleges</small>
+                </div>
+
+                <div>
+                    <strong>💻 10+</strong>
+                    <small>Courses & Branches</small>
+                </div>
+
+                <div>
+                    <strong>📍 Bhopal</strong>
+                    <small>College Information</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT SECTION ================= -->
+
+    <section class="contact-section" id="contact">
+
+        <h2>
+            Need College Information?
+        </h2>
+
+        <p>
+            Explore our college pages and visit their official websites.
+        </p>
+
+        <a href="#colleges" class="primary-button">
+            Explore Now →
+        </a>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            🎓 CollegeHub
+        </div>
+
+        <p>
+            College Information Portal
+        </p>
+
+        <p>
+            © 2026 CollegeHub. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

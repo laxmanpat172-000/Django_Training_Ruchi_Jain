@@ -1,0 +1,258 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>SISTec - College Information</title>
+
+<link rel="stylesheet" href="{% static 'college/style.css' %}">
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f7fb;
+        color: #222;
+        text-align: left;
+    }
+
+    .header {
+        background-color: #0b2d5c;
+        color: white;
+        text-align: center;
+        padding: 45px 20px;
+    }
+
+    .header h1 {
+        color: white;
+        font-size: 42px;
+        margin: 0 0 10px;
+    }
+
+    .header p {
+        font-size: 19px;
+        margin: 0;
+    }
+
+    .container {
+        width: 85%;
+        max-width: 1100px;
+        margin: 30px auto;
+    }
+
+    .card {
+        background: white;
+        padding: 25px;
+        margin-bottom: 25px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .card h2 {
+        color: #0b2d5c;
+        margin-top: 0;
+    }
+
+    .courses {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 15px;
+    }
+
+    .course {
+        background-color: #eef4ff;
+        padding: 18px;
+        border-radius: 8px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .campus {
+        background-color: #f8f8f8;
+        padding: 15px;
+        margin: 12px 0;
+        border-left: 5px solid #0b2d5c;
+    }
+
+    .button-area {
+        text-align: center;
+        margin: 30px 0;
+    }
+
+    .visit-button {
+        display: inline-block;
+        background-color: #0b2d5c;
+        color: white;
+        text-decoration: none;
+        padding: 14px 28px;
+        border-radius: 8px;
+        font-size: 17px;
+        margin: 8px;
+    }
+
+    .visit-button:hover {
+        background-color: #174f96;
+    }
+
+    footer {
+        background-color: #0b2d5c;
+        color: white;
+        text-align: center;
+        padding: 25px;
+        margin-top: 40px;
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<div class="header">
+    <h1>Sagar Institute of Science and Technology</h1>
+    <p>SISTec | Bhopal, Madhya Pradesh</p>
+</div>
+
+<div class="container">
+
+    <div class="card">
+        <h2>About SISTec</h2>
+
+        <p>
+            SISTec is an engineering institute of the Sagar Group of Institutions.
+            The institute focuses on technical education, industry-oriented learning,
+            practical skills and professional development.
+        </p>
+
+        <p>
+            The Sagar Group of Institutions was established in 2007 under the aegis
+            of Shri Agrawal Educational & Welfare Society.
+        </p>
+    </div>
+
+    <div class="card">
+
+        <h2>Courses Offered</h2>
+
+        <div class="courses">
+
+            <div class="course">
+                B.Tech
+            </div>
+
+            <div class="course">
+                M.Tech
+            </div>
+
+            <div class="course">
+                B.Pharm
+            </div>
+
+            <div class="course">
+                M.Pharm
+            </div>
+
+            <div class="course">
+                BBA
+            </div>
+
+            <div class="course">
+                MBA
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Engineering Programs</h2>
+
+        <ul>
+            <li>Computer Science & Engineering</li>
+            <li>Computer Science & Information Technology</li>
+            <li>CSE with Artificial Intelligence and Data Science</li>
+            <li>CSE with Artificial Intelligence and Machine Learning</li>
+            <li>CSE with Internet of Things</li>
+            <li>CSE with Cyber Security</li>
+            <li>Electronics & Communication Engineering</li>
+            <li>Electrical Engineering</li>
+            <li>Electrical & Electronics Engineering</li>
+            <li>Mechanical Engineering</li>
+            <li>Civil Engineering</li>
+        </ul>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Campuses</h2>
+
+        <div class="campus">
+            <strong>SISTec Gandhi Nagar Campus</strong>
+            <p>
+                Opposite International Airport, Bhopal,
+                Madhya Pradesh - 462036
+            </p>
+        </div>
+
+        <div class="campus">
+            <strong>SISTec Ratibad Campus</strong>
+            <p>
+                Sikandrabad, Near Ratibad, Bhadbhada Road,
+                Bhopal, Madhya Pradesh - 462044
+            </p>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Contact Information</h2>
+
+        <p><strong>Phone:</strong> +91 91099 75760</p>
+
+        <p>
+            <strong>Email:</strong>
+            admission@sistec.ac.in
+        </p>
+
+    </div>
+
+    <div class="button-area">
+
+        <a class="visit-button"
+           href="https://www.sistec.ac.in/"
+           target="_blank">
+            Visit Official Website
+        </a>
+
+        <a class="visit-button"
+           href="{% url 'main' %}">
+            Back to College List
+        </a>
+
+    </div>
+
+</div>
+
+<footer>
+
+    <p>
+        © SISTec College Information Page
+    </p>
+
+</footer>
+```
+
+</body>
+
+</html>

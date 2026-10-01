@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href= "{% static 'my.css' %}">
+</head>
+<body>
+    <div>
+        this is home page
+    </div>
+    <div>
+        <form action="{% url 'result' %}" method="get">
+            RI:<input type="number" step="any" required name="RI">
+            <br><br>
+            Na:<input type="number" step="any" required name="Na">
+            <br><br>
+            Mg:<input type="number" step="any" required name="Mg">
+            <br><br>
+            Al:<input type="number" step="any" required name="Al">
+            <br><br>
+            Si:<input type="number" step="any" required name="Si">
+            <br><br>
+            K:<input type="number" step="any" required name="K">
+            <br><br>
+            Ca:<input type="number" step="any" required name="Ca">
+            <br><br>
+            Ba:<input type="number" step="any" required name="Ba">
+            <br><br>
+            Fe:<input type="number" step="any" required name="Fe">
+            <br><br>
+            <input type="submit" value="submit">
+            
+            
+
+        </form>
+    </div>
+    
+    
+</body>
+</html>

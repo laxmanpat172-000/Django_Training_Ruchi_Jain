@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Beautiful Button UI</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 50px;
+            border-radius: 25px;
+            text-align: center;
+
+            backdrop-filter: blur(15px);
+
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: white;
+            margin-bottom: 30px;
+            font-size: 35px;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        button {
+            width: 180px;
+            padding: 15px;
+
+            border: none;
+            border-radius: 12px;
+
+            font-size: 17px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            background: white;
+            color: #5b4bb7;
+
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: translateY(-5px) scale(1.03);
+
+            background: #5b4bb7;
+            color: white;
+
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        @media (max-width: 500px) {
+            .container {
+                padding: 30px;
+            }
+
+            .buttons {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>✨ My Website</h1>
+
+        <div class="buttons">
+
+            <button onclick="alert('Home Button Clicked!')">
+                🏠 Home
+            </button>
+
+            <button onclick="alert('About Button Clicked!')">
+                👤 About
+            </button>
+
+            <button onclick="alert('Services Button Clicked!')">
+                💼 Services
+            </button>
+
+            <button onclick="alert('Contact Button Clicked!')">
+                📞 Contact
+            </button>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

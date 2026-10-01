@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>employeelist</title>
+</head>
+<body>
+    <div>
+        <h1>employee list</h1>
+        <a href="{% url 'saveuser' %}">
+    <button>Save Employee</button>
+</a>
+
+<a href="{% url 'employeelist' %}">
+    <button>Show Employees</button>
+</a>
+
+<a href="{% url 'updateEmployee' %}">
+    <button>Update Employee</button>
+</a>
+
+<a href="{% url 'deleteEmployee' %}">
+    <button>Delete Employee</button>
+</a>
+
+
+<br><br>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Employee NO.</th>
+                <th>Employee name</th>
+                <th>Employee salary</th>
+            </tr>
+            {% for i in Employees %}
+            <tr>
+                <td>{{ i.id }}</td>
+                <td>{{ i.Eno }}</td>
+                <td>{{ i.ename }}</td>
+                <td>{{ i.esal }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

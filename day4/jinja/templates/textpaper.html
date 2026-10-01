@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'mycss.css' %}">
+</head>
+
+<body>
+    <div>
+        {{ que }}
+    </div>
+    <div>
+        <input type="radio" name="answer" >{{ a }}</div><br>
+        <input type="radio" name="answer" >{{ b }}</div><br>
+        <input type="radio" name="answer" >{{ c }}</div><br>  
+        <input type="radio" name="answer" >{{ d }}</div><br>
+    </div>
+    <div>
+        <center><img src="{% static 'my image.jpeg' %}" alt="quiz" width= "400px" height="400px">
+            </center>
+    </div>
+
+    
+</body>
+</html>

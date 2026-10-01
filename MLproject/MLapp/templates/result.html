@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Result Page</title>
+
+    <link rel="stylesheet" href="{% static 'my.css' %}">
+
+</head>
+
+
+<body>
+
+    <div>
+
+        <h1>
+            This is Result Page
+        </h1>
+
+    </div>
+
+
+    <div>
+
+        <h1>
+            The Entered Values by User:
+            {{ list }}
+        </h1>
+
+    </div>
+
+
+    <div>
+
+        <h1>
+            The Result is:
+            {{ Answer }}
+        </h1>
+
+
+        <!-- Result According to Class -->
+
+        <h2>Type of Glass:</h2>
+
+
+        {% if Answer == 1 %}
+
+            <h2>
+                🪟 Building Windows Float Processed
+            </h2>
+
+        {% elif Answer == 2 %}
+
+            <h2>
+                🪟 Building Windows Non-Float Processed
+            </h2>
+
+        {% elif Answer == 3 %}
+
+            <h2>
+                🚗 Vehicle Windows Float Processed
+            </h2>
+
+        {% elif Answer == 4 %}
+
+            <h2>
+                🚗 Vehicle Windows Non-Float Processed
+            </h2>
+
+        {% elif Answer == 5 %}
+
+            <h2>
+                🧴 Containers
+            </h2>
+
+        {% elif Answer == 6 %}
+
+            <h2>
+                🍽️ Tableware
+            </h2>
+
+        {% elif Answer == 7 %}
+
+            <h2>
+                💡 Headlamps
+            </h2>
+
+        {% else %}
+
+            <h2>
+                ❌ Unknown Glass Type
+            </h2>
+
+        {% endif %}
+
+
+    </div>
+
+
+</body>
+
+</html>

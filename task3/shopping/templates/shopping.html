@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shopping Websites</title>
+
+    <link rel="stylesheet" href="{% static 'mycss.css' %}">
+
+</head>
+
+<body>
+
+    <h1>🛍️ Shopping Websites</h1>
+
+    <div class="container">
+
+        <!-- Amazon -->
+        <div class="card">
+
+            <img src="{% static 'amazon.jpg.jpeg' %}"
+                 alt="Amazon Logo">
+
+            <h2>Amazon</h2>
+
+            <a href="https://www.amazon.in/" target="_blank">
+                Visit Amazon
+            </a>
+
+        </div>
+
+
+        <!-- Flipkart -->
+        <div class="card">
+
+            <img src="{% static 'filpkart.jpg.jpeg' %}"
+                 alt="Flipkart Logo">
+
+            <h2>Flipkart</h2>
+
+            <a href="https://www.flipkart.com/" target="_blank">
+                Visit Flipkart
+            </a>
+
+        </div>
+
+
+        <!-- Meesho -->
+        <div class="card">
+
+            <img src="{% static 'meesho.jpg.jpeg' %}"
+                 alt="Meesho Logo">
+
+            <h2>Meesho</h2>
+
+            <a href="https://www.meesho.com/" target="_blank">
+                Visit Meesho
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- Video -->
+    <div class="video-section">
+
+        <h2>🎬 Shopping Video</h2>
+
+        <video width="400" controls>
+            <source src="{% static '/vlipsy-spiderman-spidey-face-palm-iRD2PdiP.mp4' %}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+    </div>
+
+
+</body>
+
+</html>
